@@ -1,0 +1,25 @@
+{
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "strict": true,
+    // Path alias config
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "*",
+        "**/*.ts",
+        "**/*.js",
+        "**/*.tsx",
+        "./App.tsx",
+        "./**/*",
+        "**/*",
+        "**/*.*"
+      ],
+      // We want to expose the exports of the buttons index file
+      // "buttons": ["src/components/buttons/index"]
+      // import { CircleButton } from "buttons"
+    }
+  },
+  "include": ["**/*", "./App.tsx"],
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js", "jest.config.js"]
+}
